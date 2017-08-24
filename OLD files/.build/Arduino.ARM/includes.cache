@@ -1,0 +1,47 @@
+[
+  {
+    "Sourcefile": "",
+    "Include": "",
+    "Includepath": "/Applications/Arduino.app/Contents/Java/hardware/arduino/avr/cores/arduino"
+  },
+  {
+    "Sourcefile": "",
+    "Include": "",
+    "Includepath": "/Applications/Arduino.app/Contents/Java/hardware/arduino/avr/variants/standard"
+  },
+  {
+    "Sourcefile": "/Users/tonyyan/Google Drive/Personal/Projects Folders/Leap Motion WIth Arduino/.build/Arduino.ARM/sketch/Arduino.ARM.ino.cpp",
+    "Include": "Servo.h",
+    "Includepath": "/Applications/Arduino.app/Contents/Java/libraries/Servo/src"
+  },
+  {
+    "Sourcefile": "/Users/tonyyan/Google Drive/Personal/Projects Folders/Leap Motion WIth Arduino/.build/Arduino.ARM/sketch/Arduino.ARM.ino.cpp",
+    "Include": "",
+    "Includepath": ""
+  },
+  {
+    "Sourcefile": "/Applications/Arduino.app/Contents/Java/libraries/Servo/src/avr/Servo.cpp",
+    "Include": "",
+    "Includepath": ""
+  },
+  {
+    "Sourcefile": "/Applications/Arduino.app/Contents/Java/libraries/Servo/src/nrf52/Servo.cpp",
+    "Include": "",
+    "Includepath": ""
+  },
+  {
+    "Sourcefile": "/Applications/Arduino.app/Contents/Java/libraries/Servo/src/sam/Servo.cpp",
+    "Include": "",
+    "Includepath": ""
+  },
+  {
+    "Sourcefile": "/Applications/Arduino.app/Contents/Java/libraries/Servo/src/samd/Servo.cpp",
+    "Include": "",
+    "Includepath": ""
+  },
+  {
+    "Sourcefile": "/Applications/Arduino.app/Contents/Java/libraries/Servo/src/stm32f4/Servo.cpp",
+    "Include": "",
+    "Includepath": ""
+  }
+]

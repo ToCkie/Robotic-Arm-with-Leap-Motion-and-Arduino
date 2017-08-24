@@ -1,0 +1,5 @@
+{
+    "board": "arduino:avr:uno",
+    "sketch": "Arduino.ARM.ino",
+    "port": "/dev/cu.Bluetooth-Incoming-Port"
+}

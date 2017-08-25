@@ -90,9 +90,11 @@ def map(var, inL, inH, outL, outH):
         return temp
 
 
-def LeapRaw(handPosX, handPosYRaw, handPosZ, grab, hand_pitch):
+def LeapRaw(handPosXRaw, handPosYRaw, handPosZRaw, grab, hand_pitch):
     print("-----------------------")
+    handPosX = handPosXRaw
     handPosY = handPosYRaw - 150
+    handPosZ = handPosZRaw -45
     print (handPosX, handPosY, handPosZ, grab, hand_pitch)
     wrist_oldf = (map(hand_pitch, 0.0, -0.5, -90,50))
     # hand = (map(grab, 1, 0, 10, 90))
@@ -107,7 +109,9 @@ def LeapRaw(handPosX, handPosYRaw, handPosZ, grab, hand_pitch):
     if lenB >= lenP + lenQ or handPosY < 0 or handPosZ > 0:
         print("out of range \a")
         sendPos(90, 90, 90, 90, 90, 5)
-        return 0
+        lenB = lenP + lenQ
+        handPosY = 0
+        handPosZ =0
     print("lenR", lenR)
     print("lenB", lenB)
     angH = math.degrees(math.atan(handPosY / lenR))
@@ -127,7 +131,7 @@ def LeapRaw(handPosX, handPosYRaw, handPosZ, grab, hand_pitch):
     print("elbow", elbow)
     arm = 200 - angB
     print("arm", arm)
-    wrist = (180 - angA + angH + wrist_oldf) 
+    wrist = (180 - angA + angH + 0.7*wrist_oldf) 
     # wrist = (180 - angA + angH) + wrist_oldf
     if wrist > 180:
         wrist = 180
@@ -207,7 +211,7 @@ def manu():
         
         for n in range(int(steps)+1):
             # print "\r %.2f, %.2f, %.2f, %.2f, %.2f" % (p0, p1, p2, p3, p4)
-            sendPos(l0, l1, l2, l3, l4)
+            sendPos(l0, l1, l2, l3, l4, 1)
             sys.stdout.write("\r %.2f, %.2f, %.2f, %.2f, %.2f" %
                                 (l0, l1, l2, l3, l4))
             sys.stdout.flush()
